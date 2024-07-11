@@ -1,0 +1,117 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  z-index: 1001;
+  position: relative;
+  margin-left: 250px; /* Espaço para o drawer aberto */
+  transition: margin-left 0.3s;
+}
+
+.header.drawer-closed {
+  margin-left: 60px; /* Espaço para o drawer fechado */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn {
+  display: flex;
+  background-color: #eeeeee;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-right: 20px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.menu-btn .menu-icon {
+  color: #92969e; /* Mudando a cor do ícone do menu */
+}
+
+.user-name {
+  font-size: 1.2rem;
+  border-left: #c8c8ca 1px solid;
+  padding-left: 10px;
+}
+
+.breadcrumb-container {
+  display: flex;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+.breadcrumb-item {
+  color: #9a9ea7;
+  text-decoration: none;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #9a9ea7;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+  color: #9a9ea7;
+}
+
+.breadcrumb-link:hover {
+  color: #7a7d85;
+}
+
+.breadcrumb-active {
+  color: #1D724E !important;
+  font-weight: 600;
+}
+
+#text-active {
+  background-color: #ECFDF3 !important;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+
+.breadcrumb-home {
+  color: #9a9ea7;
+  cursor: pointer;
+}
+
+.breadcrumb > .breadcrumb-item + .breadcrumb-item::before {
+  content: '>';
+  color: #9a9ea7;
+  padding: 0 5px;
+}
+
+.breadcrumb-item.active::before {
+  content: '>';
+  color: #9a9ea7 !important;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .breadcrumb-container {
+    display: none; /* Hide breadcrumbs on small screens */
+  }
+
+  .user-name {
+    padding-left: 0;
+    border-left: none;
+  }
+}
