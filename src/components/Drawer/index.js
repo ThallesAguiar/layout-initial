@@ -19,7 +19,7 @@ const Drawer = ({ selectedItem, setSelectedItem, isOpen }) => {
         <div className="drawer-top">
           {/* <img src={logo} alt="Logo" className="drawer-logo" /> */}
           logo
-        </div>
+        </div>        
         <NavLink
           to="/"
           className={({ isActive }) => `menu-item ${isActive ? 'selected' : ''}`}
@@ -48,7 +48,7 @@ const Drawer = ({ selectedItem, setSelectedItem, isOpen }) => {
       <div className="bottom-icons">
         <NavLink
           to="/config"
-          className={({ isActive }) => `menu-item ${isActive ? 'selected' : ''}`}
+          className={({ isActive }) => `icon-button ${isActive ? 'selected' : ''}`}
           onClick={() => setSelectedItem('config')}
         >
           <MdSettings />
